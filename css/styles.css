@@ -1,141 +1,215 @@
 /* 
-All html files
+Applies to all HTML files 
 */
 
-/*Same style, for all html files*/
+/* General style for all HTML files */
+
 body {
-    background-color: darkmagenta; /* Set the page background color */
-    font-family: 'Times New Roman', Times, serif; /* Define the default font family */
+    background-color: darkmagenta; /* Sets the background color for the entire page */
+    font-family: 'Times New Roman', Times, serif; /* Defines the default font family */
 }
 
-/*All list elements exept navigation*/
+/* Styles for all list elements, except navigation lists */
 
 body ul li {
-    display: list-item; /* Ensure list elements are displayed correctly */
-    margin: 0 15px; /* Add horizontal spacing between list items */
+    display: list-item; /* Ensures list items are displayed correctly */
+    margin: 0 15px; /* Adds horizontal spacing between list items */
 }
 
-/*All heading elements in html files*/
+/* Styles for all heading elements in HTML files */
 
 h1, h2 {
-    font-family: Arial, Helvetica, sans-serif; /* Set the font family for headings */
-    margin-bottom: 10px; /* Add space below headings */
-    text-align: center; /* Center heading text */
+    font-family: Arial, Helvetica, sans-serif; /* Sets the font family for headings */
+    margin-bottom: 10px; /* Adds spacing below headings */
+    text-align: center; /* Centers the heading text */
 }
 
-/*All paragraph elements in html files*/
+/* Styles for all paragraph elements in HTML files */
 
 p {
-    text-align: center; /* Center paragraph text */
-    font-size: 16px; /* Set the default font size */
+    text-align: center; /* Centers paragraph text */
+    font-size: 16px; /* Sets the default font size */
 }
 
-/*Same footer style, for all html files*/
+/* Footer style applied to all HTML files */
 
 footer {
-    background-color: black; /* Set footer background color */
-    color: white; /* Change footer text color to white */
-    text-align: center; /* Center text in the footer */
+    background-color: black; /* Sets the footer background color */
+    color: white; /* Changes footer text color to white */
+    text-align: center; /* Centers the footer text */
 }
 
-/*Same navigatior bar style, for all html files*/
+/* Link style in footer section.*/
+
+footer p a {
+    color: lightblue; /* Changes footer link color to light blue. */
+}
+
+/* Navigation bar style applied to all HTML files */
 
 #navigation {
-    background-color: darkblue; /* Set the navigation background color */
-    border: 3px solid black; /* Add a black border around the navigation */
-    padding: 10px; /* Add padding to prevent content from touching edges */
+    background-color: darkblue; /* Sets the navigation bar background color */
+    border: 3px solid black; /* Adds a black border around the navigation bar */
+    padding: 10px; /* Adds padding to prevent content from touching the edges */
 }
 
-/*Same button list layout in navigatior bar, for all html files*/
+/* Layout for the navigation button list, applied to all HTML files */
 
 #navigation ul {
-    list-style: none; /* Remove default list bullets */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex; /* Display navigation items in a horizontal row */
-    gap: 10px; /* Add spacing between navigation items */
+    list-style: none; /* Removes default list bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Displays navigation items in a horizontal row */
+    gap: 10px; /* Adds spacing between navigation items */
 }
 
-/*Same button style in navigatior bar, for all html files*/
+/* Button styling inside the navigation bar, applied to all HTML files */
 
 #navigation ul li input {
-    background-color: darkblue; /* Set background color for input fields inside navigation */
-    color: white; /* Change input text color to white */
+    background-color: darkblue; /* Sets background color for input fields inside navigation */
+    color: white; /* Changes input text color to white */
 }
 
 /* 
 services.html
 */
 
-/*Pictures layout*/
+/* Defines the layout for service section images */
 
 #service {
-    max-height: 100px; /* Limit the maximum height of the service section */
+    max-height: 100px; /* Limits the maximum height of the service section */
 }
 
 /* 
 index.html
 */
 
-/*Hero section general style*/
+/* General style for the hero section */
 
 .hero {
-    background: linear-gradient(45deg, #ffb3ff, #ff66ff); /* Apply a gradient background */
+    background: linear-gradient(45deg, #ffb3ff, #ff66ff); /* Applies a gradient background */
 }
 
-/*Paragraph layout in hero section*/
+/* Paragraph text alignment in the hero section */
 
 .hero p {
-    text-align: center; /* Center paragraph text inside the hero section */
+    text-align: center; /* Centers paragraph text inside the hero section */
 }
 
-/*Button layout and style in hero section*/
+/* Button layout and styling in the hero section */
 
 .hero ul form input {
-    margin-bottom: 10px; /* Add space below input fields */
-    background-color: #ffb3ff; /* Set input background color */
-    margin-left: 700px; /* Add right margin for spacing */
+    margin-bottom: 10px; /* Adds spacing below input fields */
+    background-color: #ffb3ff; /* Sets input background color */
+    margin-left: 700px; /* Adds left margin for positioning */
 }
 
-/*Three-column section list layout*/
+/* Button hover effect in the hero section */
+
+.hero ul form input:hover {
+    background-color: #ffb3f2; /* Changes background color on hover */
+}
+
+/* Three-column section list layout */
 
 .column ul {
-    max-width: 270px; /* Set a max text width */
-    margin: 0 auto; /* Centers it horizontally */
-    list-style-position: inside; /* Optional: keeps bullets inside */
+    max-width: 270px; /* Sets a max text width */
+    margin: 0 auto; /* Centers the list horizontally */
+    list-style-position: inside; /* Keeps bullets inside the list area */
 }
 
 /* 
 contact.html
 */
 
-/*Contact form's text and message areas style */
+/* Styling for input and textarea fields in the contact form */
 
 .contact input, .contact textarea {
-    border-radius: 10px; /* Round the corners of input fields and text areas */
+    border-radius: 10px; /* Rounds the corners of input fields and text areas */
 }
 
-/*Contact form's email text's layout */
+/* Layout adjustments for the email input field in the contact form */
 
 .contact #email {
-    margin-left: 25px; /* Add left margin to the email input field */
+    margin-left: 25px; /* Adds left margin for alignment */
 }
 
-/*Contact form's button layout */
+/* Layout adjustments for the submit button in the contact form */
 
 .contact #submit {
-    margin-left: 100px; /* Add left margin to the submit button */
-    border-radius: 0; /* Remove rounded corners from the submit button */
+    margin-left: 100px; /* Adds left margin for positioning */
+    border-radius: 0; /* Removes rounded corners */
+}
+
+/* Hover effect for the submit button in the contact form */
+
+.contact #submit:hover {
+    background-color: #D3D3D3; /* Changes background color on hover */
 }
 
 /* 
 about.html
 */
 
-/*Pictures layout*/
+/* Layout for images in the about page */
 
 #team {
     display: block;
     margin: auto;
-    max-width: 25%;
+    max-width: 25%; /* Limits the image width */
+}
+
+/* Responsive design adjustments for screens smaller than 768px */
+
+@media (max-width: 768px) {  
+
+    /* 4.1.1 Converts grid layouts into single-column layouts */
+
+    .column ul {
+        max-width: 100%; /* Removes width limitation */
+        text-align: center; /* Centers the text */
+    }
+
+    /* 4.1.2 Reduces font sizes and button widths for smaller screens */
+
+    body {
+        font-size: 14px; /* Decreases the font size */
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Decreases the heading font size */
+    }
+
+    .hero ul form input {
+        width: 80%; /* Reduces button width */
+        margin-left: auto; /* Removes fixed positioning */
+        margin-right: auto;
+        display: block; /* Centers the button */
+    }
+
+    .contact #submit {
+        width: 80%; /* Reduces submit button width */
+        margin-left: auto; /* Centers the button */
+        margin-right: auto;
+        display: block;
+    }
+
+    /* 4.1.3 Adjusts flex-direction for better mobile layout */
+
+    #navigation ul {
+        flex-direction: column; /* Converts navigation to a vertical layout */
+        align-items: center;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .contact input, .contact textarea {
+        width: 90%; /* Makes contact form fields wider */
+    }
+    
+    #team {
+        max-width: 50%; /* Increases image size for better visibility */
+    }
 }
