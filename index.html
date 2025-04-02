@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <nav id="navigation">
-            <ul>
-                <li>
-                    <form action="index.html">
-                        <input type="submit" value="Main Page">
-                    </form>
-                </li>
-                
-                <li>
-                    <form action="services.html">
-                        <input type="submit" value="List of Services">
-                    </form>
-                </li>
-                
-                <li>
-                    <form action="contact.html">
-                        <input type="submit" value="Contact Us">
-                    </form>
-                </li>
-                
-                <li>
-                    <form action="about.html">
-                        <input type="submit" value="About the Team">
-                    </form>
-                
-                </li>
-            </ul>
-        </nav>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <section class="hero">
-            <h1>Welcome to our website about video games</h1>
-            <p><b>Discover about the video games and other cool stuff.</b></p>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-            <br>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Video Games Website</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Main Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">List of Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About the Team</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="darkModeToggle" class="btn btn-light">Toggle Dark Mode</button>
+        </div>
+    </nav>
 
-            <ul>
-                <form action="services.html">
-                    <input type="submit" value="Get Started">
-                </form>
-            </ul>
-        </section>
+    <section class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="jumbotron bg-light p-4">
+                    <h1 class="display-4">Welcome to our website about video games</h1>
+                    <p class="lead">Discover the world of video games and other cool stuff.</p>
+                    <hr class="my-4">
+                    <p>We provide the latest updates and insights on video games for newcomers and enthusiasts alike.</p>
+                    <a class="btn btn-primary btn-lg" href="services.html" role="button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <br>
-        <hr>
+    <div class="custom-break"></div>
+    
+    <section class="feature_section">
+        <h2>About our site</h2>
+        <p><b>This website is for people who doesn't really know about video games.</b></p>
+        <p><b>And of course, provide the latest information about video games.</b></p>
+    </section>
 
-        <section class="feature_section">
-            <h2>About our site</h2>
-            <p><b>This website is for people who doesn't realy know about video games.</b></p>
-            <p><b>And of course provide latest information about video games.</b></p>
-        </section>
+    <div class="custom-break"></div>
 
-        <br>
-        <hr>
+    <section class="column">
+        <h2>Important section</h2>
+        <p><b>This list provides basic information that will be in this website</b></p>
+        <ul>
+            <li>Gameplay Mechanics</li>
+            <li>Graphics and Visual Effects</li>
+            <li>Narrative & World Building</li>
+            <li>Multiplayer and Social Features</li>
+            <li>Audio and Sound Design</li>
+        </ul>
+    </section>
 
-        <section class="column">
-            <h2>Important section</h2>
-            <p><b>This list provides basic information that will be in this website</b></p>
-
-            <ul>
-                <li>Gameplay Mechanics</li>
-                <li>Graphics and Visual Effects</li>
-                <li>Narrative & World Building</li>
-                <li>Multiplayer and Social Features</li>
-                <li>Audio and Sound Design</li>
-            </ul>
-        </section>
-
-        <hr>
-
-    </body>
-    <footer>
-        <p>&copy; 2015 - 2025 Our Website. All rights reserved. <a href="https://www.instagram.com/">Instagram</a>, <a
-            href="https://x.com/?mx=2">X</a></p>
+    <footer id="footer">
+        <p>&copy; <span id="years_before"></span><span id="corrent_year"></span> Our Website. All rights reserved. <a href="https://www.instagram.com/">Instagram</a>, <a href="https://x.com/?mx=2">X</a></p>
     </footer>
+
+    <script src="js/DarkTheme.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/toggle.js"></script>
+
+</body>
 </html>
