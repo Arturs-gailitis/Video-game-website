@@ -1,0 +1,33 @@
+<?php
+
+require_once "./Website/Video-game-website/includes/db.php";
+
+class Database {
+
+    private $host = "localhost";
+    private $username = "root";
+    private $password = "arturs2003";
+    private $database = "webdev_project";
+    private $port = 4306;
+    private $con;
+
+    public function __construct() {
+        try{
+            $this->con = new PDO(
+                "mysql:host={$this->host};port={$this->port};dbname={$this->database}", 
+                $this->username, 
+                $this->password
+            );
+        } catch (PDOException $e) {
+            die("Connection faled: " . $e->getMessage());
+        }
+
+    }
+
+    public function getConnection() {
+        return $this->con;
+    }
+
+
+}
+?>
