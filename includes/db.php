@@ -2,7 +2,7 @@
 //Gatis
 $host = "localhost";
 $username = "root";
-$password = "";
+$password = "arturs2003";
 $database = "webdev_project";
 $port = 3306;
 
