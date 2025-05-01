@@ -4,7 +4,7 @@ $host = "localhost";
 $username = "root";
 $password = "arturs2003";
 $database = "webdev_project";
-$port = 4306;
+$port = 3306;
 
 try {
 
