@@ -37,7 +37,7 @@ class Service {
     public function update($id, $title, $desc, $image = null) {
         if ($image) {
             // Handle new image upload
-            $uploadDir = 'uploads/services/';
+            $uploadDir = 'images/services/';
             $fileName = uniqid() . '_' . basename($image['name']);
             $targetPath = $uploadDir . $fileName;
             
@@ -70,7 +70,7 @@ class Service {
         // First get the image to delete it
         $service = $this->getServiceById($id);
         if ($service && $service['image']) {
-            $imagePath = 'uploads/services/' . $service['image'];
+            $imagePath = 'images/services/' . $service['image'];
             if (file_exists($imagePath)) {
                 unlink($imagePath);
             }
