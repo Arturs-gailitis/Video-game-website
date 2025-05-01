@@ -120,9 +120,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
         </div>
 
+        <?php if (isset($errors['login'])): ?>
+            <div class="error"><?php echo $errors['login']; ?></div>
+        <?php endif; ?>
+
         <?php if (isset($errors['database'])): ?>
             <div class="error"><?php echo $errors['database']; ?></div>
-            <div class="error"><?php echo $errors['login']; ?></div>
         <?php endif; ?>
 
         <button type="submit">Login</button>
