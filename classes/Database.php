@@ -1,6 +1,6 @@
 <?php
 
-require_once "./Website/Video-game-website/includes/db.php";
+require_once __DIR__ . '/../includes/db.php';
 
 class Database {
 
