@@ -13,7 +13,7 @@ class Service {
     public function create($title, $desc, $image) {
         // Define upload directory and unique filename
         $uploadDir = 'images/services/';
-        $fileName = uniqid() . '_' . basename($image['name']);
+        $fileName = basename($image['name']);
         $targetPath = $uploadDir . $fileName;
         
         // Move uploaded file
