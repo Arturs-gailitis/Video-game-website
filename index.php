@@ -2,7 +2,6 @@
 session_start();
 $welcomeBack = '';
 
-// Rādīt paziņojumu tikai, ja lietotājs ir ielogojies
 if (isset($_SESSION['user_id']) && isset($_COOKIE['username'])) {
     $lastVisit = $_COOKIE['last_visit'] ?? 'a while ago';
     $welcomeBack = "Welcome back, " . htmlspecialchars($_COOKIE['username']) . "! Last visit: " . $lastVisit;
@@ -20,7 +19,11 @@ if (isset($_SESSION['user_id']) && isset($_COOKIE['username'])) {
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+
             <a class="navbar-brand" href="#">Video Games Website</a>
+
+            <a class="navbar-brand" href="index.php">Video Games Website</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,7 +62,7 @@ if (isset($_SESSION['user_id']) && isset($_COOKIE['username'])) {
                     <p class="lead">Discover the world of video games and other cool stuff.</p>
                     <hr class="my-4">
                     <p>We provide the latest updates and insights on video games for newcomers and enthusiasts alike.</p>
-                    <a class="btn btn-primary btn-lg" href="services.html" role="button">Get Started</a>
+                    <a class="btn btn-primary btn-lg" href="services.php" role="button">Get Started</a>
                 </div>
             </div>
         </div>
