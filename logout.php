@@ -6,7 +6,7 @@ $username = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_SESSION['user_email'])) {
-        date_default_timezone_set('Europe/Riga');
+        date_default_timezone_set('America/Chicago');
         
         setcookie("username", $_SESSION['user_email'], time() + (86400 * 30), "/");
         setcookie("last_visit", date("Y-m-d H:i:s"), time() + (86400 * 30), "/");
