@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>Contact information</h2>
         <p><b>Email:</b> testing.gmail.com</p>
         <p><b>Phone:</b> 20 225 269</p>
-        <p><b>Address:</b> 4169 Cody Ridge Road, Oklahoma City, Oklahoma, US</p>
+        <p><b>Address:</b> 	Elizabetes iela 55, Rīga, Latvia</p>
     </section>
     
     <footer id="footer" class="text-center mt-5">
