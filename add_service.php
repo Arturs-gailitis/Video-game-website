@@ -6,11 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $desc = $_POST['description'];
     $image = $_FILES['image'];
     
-    // Validate the image
     $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
     if (!in_array($image['type'], $allowedTypes)) {
         $error = "Only JPG, PNG, and GIF images are allowed.";
-    } elseif ($image['size'] > 2000000) { // 2MB limit
+    } elseif ($image['size'] > 2000000) {
         $error = "Image size must be less than 2MB.";
     } else {
         $service = new Service();

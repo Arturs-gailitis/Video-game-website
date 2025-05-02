@@ -1,5 +1,4 @@
 <?php
-//Gatis
 $host = "localhost";
 $username = "root";
 $password = "arturs2003";

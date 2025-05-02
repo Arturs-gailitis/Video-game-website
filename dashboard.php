@@ -4,7 +4,6 @@ require_once 'classes/Service.php';
 $service = new Service();
 $services = $service->readAll();
 
-// Handle delete action
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     if ($service->delete($id)) {
