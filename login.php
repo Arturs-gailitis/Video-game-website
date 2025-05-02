@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require_once __DIR__ . '/classes/Database.php';
@@ -14,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 
     if (empty($email)) {
-        $errors['email'] = 'E-mal is required';
+        $errors['email'] = 'E-mail is required';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = 'E-mail is in wrong format';
     } 
@@ -23,34 +22,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['password'] = 'Password is required';
     } 
 
-
     if (empty($errors)) {
         try {
             $stmt = $con->prepare("SELECT * FROM users WHERE email = ?");
             $stmt->execute([$email]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if ($user) {
-                if (password_verify($password, $user['password'])) {
-
-                    $_SESSION['user_id'] = $user['id'];
-                    $_SESSION['user_email'] = $user['email'];
-                    
-                    header("Location: index.html");
-                    
-                    exit();
-
-                } else {
-
-                    $errors['login'] = 'Invalid email or password';
-                }
-
+            if ($user && password_verify($password, $user['password'])) {
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_email'] = $user['email'];
+                $_SESSION['username'] = $user['username'];
+                header("Location: index.php");
+                exit;
             } else {
                 $errors['login'] = 'Invalid email or password';
             }
-
         } catch (PDOException $e) {
-            $errors['database'] = 'Login failed: ' . $e->getMessage();
+            $errors['db'] = 'Database error: ' . $e->getMessage();
         }
     }
 }
