@@ -19,7 +19,11 @@ if (isset($_SESSION['user_id']) && isset($_COOKIE['username'])) {
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">Video Games Website</a>
+
             <a class="navbar-brand" href="index.php">Video Games Website</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
