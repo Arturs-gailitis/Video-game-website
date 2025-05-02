@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Video Games Website</a>
+            <a class="navbar-brand" href="index.php">Video Games Website</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Main Page</a>
+                        <a class="nav-link" href="index.php">Main Page</a>
+                    </li>
+                    <li c   lass="nav-item">
+                        <a class="nav-link" href="services.php">List of Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">List of Services</a>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About the Team</a>
+                        <a class="nav-link" href="about.php">About the Team</a>
                     </li>
                 </ul>
             </div>
