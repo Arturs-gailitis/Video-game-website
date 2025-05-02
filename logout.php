@@ -4,10 +4,10 @@ session_start();
 $loggedOut = false;
 $username = '';
 
-// If user clicks "Logout" button
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Save username into cookie (if available in session)
     if (isset($_SESSION['user_email'])) {
+        date_default_timezone_set('Europe/Riga');
+        
         setcookie("username", $_SESSION['user_email'], time() + (86400 * 30), "/");
         setcookie("last_visit", date("Y-m-d H:i:s"), time() + (86400 * 30), "/");
         $username = $_SESSION['user_email'];
