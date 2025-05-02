@@ -31,23 +31,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Video Games Website</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Main Page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.php">List of Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.php">About the Team</a></li>
-                </ul>
-            </div>
-            <button id="darkModeToggle" class="btn btn-light">Toggle Dark Mode</button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.php">Video Games Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Main Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.php">List of Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">About the Team</a></li>
+            </ul>
         </div>
-    </nav>
+        <div class="d-flex">
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="dashboard.php" class="btn btn-success">Dashboard</a>
+                <a href="logout.php" class="btn btn-success ml-2">Logout</a>
+            <?php else: ?>
+                <a href="register.php" class="btn btn-success">Register</a>
+                <a href="login.php" class="btn btn-success ml-2">Login</a>
+            <?php endif; ?>
+            <button id="darkModeToggle" class="btn btn-light ml-2">Toggle Dark Mode</button>
+        </div>
+    </div>
+</nav>
 
     <section class="contact"> 
         <div class="container mt-5">

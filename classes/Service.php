@@ -76,5 +76,13 @@ class Service {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    
+    public function searchByKeyword($keyword) {
+        $stmt = $this->db->prepare("SELECT * FROM services WHERE title LIKE :kw OR description LIKE :kw");
+        $kw = '%' . $keyword . '%';
+        $stmt->bindParam(':kw', $kw);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
