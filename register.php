@@ -40,10 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $con->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
             if ($stmt->execute([$username, $email, $hashed_password])) {
                 if (!headers_sent()) {
-                    header("Location: index.html");
+                    header("Location: index.php");
                     exit();
                 } else {
-                    echo '<script>window.location.href = "index.html";</script>';
+                    echo '<script>window.location.href = "index.php";</script>';
                     exit();
                 }
             }
