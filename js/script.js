@@ -1,8 +1,6 @@
-// Footer datums
 document.getElementById("years_before").textContent = "2015 - ";
 document.getElementById("corrent_year").textContent = new Date().getFullYear();
 
-// Footer hover efekti
 const footer = document.getElementById("footer");
 footer.addEventListener("mouseover", function() {
     footer.style.backgroundColor = "darkgrey";
@@ -13,7 +11,6 @@ footer.addEventListener("mouseout", function() {
     footer.style.color = "white";
 });
 
-// Formas validācija
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const errorBox = document.getElementById("ErrorMassage");
@@ -41,13 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (error) {
-                event.preventDefault(); // Bloķē tikai ja ir kļūda
+                event.preventDefault();
                 errorBox.innerHTML = e_massage;
             }
         });
     }
 
-    // Pakalpojumu filtrēšana pēc dropdown (ja ir)
     const dropdown = document.getElementById("serviceDropdown");
     if (dropdown) {
         const cards = Array.from(document.querySelectorAll(".card"));

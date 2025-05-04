@@ -52,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search'])) {
 <div class="container mt-4">
     <h2 class="text-center mb-4">Our Services</h2>
 
-    <!-- Search bar -->
     <form method="POST" class="form-inline justify-content-center mb-4">
         <input type="text" name="search" class="form-control mr-2" placeholder="Search services..." value="<?= htmlspecialchars($_POST['search'] ?? '') ?>">
         <button type="submit" class="btn btn-primary">Search</button>

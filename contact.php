@@ -101,7 +101,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="https://www.instagram.com/">Instagram</a>, <a href="https://x.com/">X</a></p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         const form = document.getElementById('contactForm');

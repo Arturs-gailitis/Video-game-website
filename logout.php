@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = $_SESSION['user_email'];
     }
 
-    // Destroy session
     $_SESSION = [];
     session_destroy();
     $loggedOut = true;
